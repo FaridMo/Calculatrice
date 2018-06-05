@@ -446,6 +446,7 @@ public class Calculatrice {
 			button_14.setEnabled(false);
 			button_15.setEnabled(false);
 			button_16.setEnabled(false);
+			button_18.setEnabled(false);
 			
 			panneau.setEnabled(false);
 			
@@ -475,7 +476,7 @@ public class Calculatrice {
 			button_14.setEnabled(true);
 			button_15.setEnabled(true);
 			button_16.setEnabled(true);
-			
+			button_18.setEnabled(true);
 			panneau.setEnabled(true);
 		}
 }
