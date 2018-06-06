@@ -77,6 +77,10 @@ public class Calculatrice {
 				rep = numero / Double.parseDouble(jtext.getText());
 				jtext.setText(Double.toString(rep));
 				break;
+			case 5 :
+				rep = numero % Double.parseDouble(jtext.getText());
+				jtext.setText(Double.toString(rep));
+				break;
 		}
 	}
 	
@@ -415,6 +419,19 @@ public class Calculatrice {
 		button_16.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		button_16.setBounds(134, 298, 89, 23);
 		panneau.add(button_16);
+		
+		JButton button_17 = new JButton("%");
+		button_17.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				numero = Double.parseDouble(jtext.getText());
+				resultat = 5;
+				numhaut.setText(jtext.getText());
+				jtext.setText(null);
+			}
+		});
+		button_17.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
+		button_17.setBounds(25, 334, 89, 23);
+		panneau.add(button_17);
 		frmMaCalculatrice.setType(Type.UTILITY);
 		frmMaCalculatrice.setTitle("Ma Calculatrice");
 		frmMaCalculatrice.setBounds(100, 100, 489, 466);
