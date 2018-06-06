@@ -3,6 +3,7 @@ package com.tdsi;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Point;
 import java.awt.SystemColor;
 import java.awt.Window.Type;
@@ -10,9 +11,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JEditorPane;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -42,6 +45,8 @@ public class Calculatrice {
 	private JButton button_14;
 	private JButton button_15;
 	private JButton button_16;
+	private JButton button_17;
+	private JButton button_18;
 	private JRadioButton rdbtnNewRadioButton;
 	private JRadioButton rdbtnOff;
 	private JButton btnC;
@@ -85,7 +90,7 @@ public class Calculatrice {
 	}
 	
 	private final ButtonGroup buttonGroup = new ButtonGroup();
-	private JButton button_18;
+	
 	private JTextField numhaut;
 
 	/**
@@ -125,7 +130,7 @@ public class Calculatrice {
 		frmMaCalculatrice.getContentPane().setLayout(null);
 		
 		panneau = new JPanel();
-		panneau.setBounds(10, 37, 453, 368);
+		panneau.setBounds(10, 37, 427, 344);
 		frmMaCalculatrice.getContentPane().add(panneau);
 		panneau.setLayout(null);
 		
@@ -163,7 +168,7 @@ public class Calculatrice {
 		btnC.setFont(new Font("Trebuchet MS", Font.BOLD, 16));
 		
 		button_1 = new JButton("+");
-		button_1.setBounds(354, 128, 89, 23);
+		button_1.setBounds(275, 167, 68, 23);
 		panneau.add(button_1);
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -178,7 +183,7 @@ public class Calculatrice {
 		button_1.setFont(new Font("Trebuchet MS", Font.BOLD, 16));
 		
 		button = new JButton("7");
-		button.setBounds(26, 167, 89, 23);
+		button.setBounds(26, 167, 68, 23);
 		panneau.add(button);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -188,7 +193,7 @@ public class Calculatrice {
 		button.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_2 = new JButton("8");
-		button_2.setBounds(134, 167, 89, 23);
+		button_2.setBounds(115, 167, 68, 23);
 		panneau.add(button_2);
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -198,7 +203,7 @@ public class Calculatrice {
 		button_2.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_3 = new JButton("9");
-		button_3.setBounds(233, 167, 89, 23);
+		button_3.setBounds(193, 167, 68, 23);
 		panneau.add(button_3);
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -209,7 +214,7 @@ public class Calculatrice {
 		button_3.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_4 = new JButton("4");
-		button_4.setBounds(26, 201, 89, 23);
+		button_4.setBounds(26, 201, 68, 23);
 		panneau.add(button_4);
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -219,7 +224,7 @@ public class Calculatrice {
 		button_4.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_5 = new JButton("5");
-		button_5.setBounds(134, 201, 89, 23);
+		button_5.setBounds(115, 201, 68, 23);
 		panneau.add(button_5);
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -229,7 +234,7 @@ public class Calculatrice {
 		button_5.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_6 = new JButton("6");
-		button_6.setBounds(233, 201, 89, 23);
+		button_6.setBounds(193, 201, 68, 23);
 		panneau.add(button_6);
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -239,7 +244,7 @@ public class Calculatrice {
 		button_6.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_7 = new JButton("1");
-		button_7.setBounds(26, 235, 89, 23);
+		button_7.setBounds(26, 235, 68, 23);
 		panneau.add(button_7);
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -249,7 +254,7 @@ public class Calculatrice {
 		button_7.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_8 = new JButton("2");
-		button_8.setBounds(134, 235, 89, 23);
+		button_8.setBounds(115, 235, 68, 23);
 		panneau.add(button_8);
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -259,7 +264,7 @@ public class Calculatrice {
 		button_8.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_9 = new JButton("3");
-		button_9.setBounds(233, 235, 89, 23);
+		button_9.setBounds(193, 235, 68, 23);
 		panneau.add(button_9);
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -269,7 +274,7 @@ public class Calculatrice {
 		button_9.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_10 = new JButton("-");
-		button_10.setBounds(354, 167, 89, 23);
+		button_10.setBounds(275, 201, 68, 23);
 		panneau.add(button_10);
 		button_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -282,7 +287,7 @@ public class Calculatrice {
 		button_10.setFont(new Font("Trebuchet MS", Font.BOLD, 16));
 		
 		btnX = new JButton("*");
-		btnX.setBounds(354, 205, 89, 23);
+		btnX.setBounds(275, 235, 68, 23);
 		panneau.add(btnX);
 		btnX.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -295,7 +300,7 @@ public class Calculatrice {
 		btnX.setFont(new Font("Trebuchet MS", Font.BOLD, 16));
 		
 		button_12 = new JButton("/");
-		button_12.setBounds(354, 243, 89, 23);
+		button_12.setBounds(275, 269, 68, 23);
 		panneau.add(button_12);
 		button_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -313,12 +318,12 @@ public class Calculatrice {
 				operations();
 			}
 		});
-		button_11.setBounds(233, 276, 192, 47);
+		button_11.setBounds(195, 303, 148, 31);
 		panneau.add(button_11);
 		button_11.setFont(new Font("Trebuchet MS", Font.BOLD, 38));
 		
 		button_13 = new JButton("0");
-		button_13.setBounds(133, 269, 89, 23);
+		button_13.setBounds(114, 269, 68, 23);
 		panneau.add(button_13);
 		button_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -328,7 +333,7 @@ public class Calculatrice {
 		button_13.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_14 = new JButton(".");
-		button_14.setBounds(25, 269, 89, 23);
+		button_14.setBounds(25, 269, 68, 23);
 		panneau.add(button_14);
 		button_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -338,7 +343,7 @@ public class Calculatrice {
 		button_14.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		
 		button_15 = new JButton("\u221a");
-		button_15.setBounds(25, 300, 89, 23);
+		button_15.setBounds(25, 300, 68, 23);
 		panneau.add(button_15);
 		button_15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -382,14 +387,14 @@ public class Calculatrice {
 		JEditorPane editorPane = new JEditorPane();
 		editorPane.setEditable(false);
 		editorPane.setBackground(SystemColor.control);
-		editorPane.setBounds(10, 11, 433, 89);
+		editorPane.setBounds(10, 11, 412, 89);
 		panneau.add(editorPane);
 		editorPane.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
 		
 		jtext = new JTextField();
 		jtext.setEditable(false);
 		jtext.setBorder(null);
-		jtext.setBounds(20, 47, 412, 47);
+		jtext.setBounds(20, 47, 397, 47);
 		panneau.add(jtext);
 		jtext.setEnabled(false);
 		jtext.setBackground(SystemColor.control);
@@ -404,7 +409,7 @@ public class Calculatrice {
 		numhaut.setEditable(false);
 		numhaut.setHorizontalAlignment(SwingConstants.RIGHT);
 		numhaut.setBorder(null);
-		numhaut.setBounds(169, 16, 263, 31);
+		numhaut.setBounds(169, 16, 246, 31);
 		panneau.add(numhaut);
 		numhaut.setColumns(10);
 		
@@ -417,24 +422,34 @@ public class Calculatrice {
 			}
 		});
 		button_16.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
-		button_16.setBounds(134, 298, 89, 23);
+		button_16.setBounds(115, 300, 68, 23);
 		panneau.add(button_16);
 		
-		JButton button_17 = new JButton("%");
+		button_17 = new JButton("%");
 		button_17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero = Double.parseDouble(jtext.getText());
 				resultat = 5;
-				numhaut.setText(jtext.getText());
+				numhaut.setText(numero+"%");
 				jtext.setText(null);
 			}
 		});
 		button_17.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
-		button_17.setBounds(25, 334, 89, 23);
+		button_17.setBounds(193, 269, 68, 23);
 		panneau.add(button_17);
+		
+		JLabel image = new JLabel("");
+		
+		//Ajout de l'image
+		Image img = new ImageIcon(this.getClass().getResource("/coffee-icon.png")).getImage();
+		image.setIcon(new ImageIcon(img));
+		
+		
+		image.setBounds(355, 143, 67, 191);
+		panneau.add(image);
 		frmMaCalculatrice.setType(Type.UTILITY);
 		frmMaCalculatrice.setTitle("Ma Calculatrice");
-		frmMaCalculatrice.setBounds(100, 100, 489, 466);
+		frmMaCalculatrice.setBounds(100, 100, 466, 447);
 		frmMaCalculatrice.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
@@ -463,6 +478,7 @@ public class Calculatrice {
 			button_14.setEnabled(false);
 			button_15.setEnabled(false);
 			button_16.setEnabled(false);
+			button_17.setEnabled(false);
 			button_18.setEnabled(false);
 			
 			panneau.setEnabled(false);
@@ -493,6 +509,7 @@ public class Calculatrice {
 			button_14.setEnabled(true);
 			button_15.setEnabled(true);
 			button_16.setEnabled(true);
+			button_17.setEnabled(true);
 			button_18.setEnabled(true);
 			panneau.setEnabled(true);
 		}
